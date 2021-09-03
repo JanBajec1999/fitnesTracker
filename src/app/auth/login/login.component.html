@@ -1,0 +1,12 @@
+<form [formGroup]="submitForm" (ngSubmit)="onSubmit()">
+  <ion-item>
+    <ion-label position="floating">Username or Email</ion-label>
+    <ion-input formControlName="usernameOrEmail"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" formControlName="password"></ion-input>
+  </ion-item>
+  <div style="height: 5px"></div>
+  <ion-button expand="full" type="submit" [disabled]="!submitForm.valid">LOGIN</ion-button>
+</form>

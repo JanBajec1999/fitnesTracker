@@ -1,0 +1,7 @@
+<ion-card>
+  <ion-card-header>FITNESS TRACKER</ion-card-header>
+  <app-login *ngIf="loginBool"></app-login>
+  <app-register *ngIf="!loginBool"></app-register>
+  <ion-button *ngIf="loginBool" (click)="loginBool = !loginBool" expand="full" size="small" fill="clear">Need to sign in?</ion-button>
+  <ion-button *ngIf="!loginBool" (click)="loginBool = !loginBool" expand="full" size="small" fill="clear">Signed in already?</ion-button>
+</ion-card>
