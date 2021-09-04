@@ -1,4 +1,6 @@
 {
+    "identityPoolName": "fitnestracker00eb908b00eb908b_identitypool_087e049c",
+    "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "fitnes00eb908b",
     "userPoolName": "fitnestracker00eb908b_userpool_00eb908b",
     "autoVerifiedAttributes": [
@@ -34,7 +36,7 @@
     "userpoolClientSetAttributes": false,
     "sharedId": "00eb908b",
     "resourceName": "fitnestracker00eb908b00eb908b",
-    "authSelections": "userPoolOnly",
+    "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",

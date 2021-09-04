@@ -21,8 +21,8 @@ Amplify.configure({
   API: {
     endpoints: [
       {
-        name: 'api719655d7',
-        endpoint: 'https://47nykg7rfc.execute-api.eu-central-1.amazonaws.com/dev'
+        name: 'fitnesTrackerAPI',
+        endpoint: 'https://cfhkx5lfz9.execute-api.eu-central-1.amazonaws.com/dev'
       }
     ]
   }

@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "fitnestracker00eb908b00eb908b": {}
+      },
+      "function": {
+        "fitnesTrackerUserLambda": {
+          "deploymentBucketName": "amplify-fitnestracker-dev-141250-deployment",
+          "s3Key": "amplify-builds/fitnesTrackerUserLambda-38343567415569365a64-build.zip"
+        }
       }
     }
   }
