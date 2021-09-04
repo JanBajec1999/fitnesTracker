@@ -1,3 +1,16 @@
-<ion-content>
+<ion-content align="center">
+  <ion-card>
+    <ion-avatar>
+      <img src="https://cdn.pixabay.com/photo/2017/11/10/05/24/add-2935429_960_720.png">
+    </ion-avatar>
+    <div style="width: 15px"></div>
+    <div>
+      <ion-title>{{this.username}}</ion-title>
+      <ion-title>{{this.email}}</ion-title>
+    </div>
+  </ion-card>
+
+  <ion-button expand="full" (click)="signOut()">EDIT PROFILE</ion-button>
+  <ion-button expand="full" (click)="signOut()" color="danger">SIGN OUT</ion-button>
 
 </ion-content>

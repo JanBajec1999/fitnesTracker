@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {Amplify} from 'aws-amplify';
 import {AmplifyService} from 'aws-amplify-angular';
+import {AuthGuardService} from "./services/auth-guard.service";
 
 Amplify.configure({
   Auth: {
@@ -32,7 +33,7 @@ Amplify.configure({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, AmplifyService ],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, AmplifyService, AuthGuardService ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

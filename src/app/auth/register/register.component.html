@@ -1,4 +1,4 @@
-<form [formGroup]="submitForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="submitForm" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
   <ion-item>
     <ion-label position="floating">Username</ion-label>
     <ion-input formControlName="username"></ion-input>

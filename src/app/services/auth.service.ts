@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Router} from '@angular/router';
 import {AmplifyService} from 'aws-amplify-angular';
-import {Auth} from "aws-amplify";
+import {Auth} from 'aws-amplify';
 
 @Injectable({
   providedIn: 'root'
@@ -63,5 +63,19 @@ export class AuthService {
     } catch (error) {
       console.log('error signing out: ', error);
     }
+  }
+
+  getUser(): Promise<any> {
+    return Auth.currentSession()
+      .then(data =>
+        // console.log(data.getIdToken().payload.email);
+        // console.log(data.getIdToken().payload['cognito:username']);
+        //console.log(data.getIdToken().getJwtToken());
+         ({username: data.getIdToken().payload['cognito:username'], email: data.getIdToken().payload.email, jwt: data.getIdToken().getJwtToken()})
+      )
+      .catch(err => {
+        console.log(err);
+        return null;
+      });
   }
 }
