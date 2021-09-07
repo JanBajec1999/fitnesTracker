@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import {Router} from '@angular/router';
 import {AmplifyService} from 'aws-amplify-angular';
 import {Auth} from 'aws-amplify';
+import { User } from '../classes/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   signedIn = false;
+  currentUser: User;
 
   constructor(private router: Router, private amplifyService: AmplifyService) {
     this.amplifyService.authStateChange$.subscribe(auth => {
@@ -32,6 +34,7 @@ export class AuthService {
       if(tokens != null){
         console.log('Auth success');
         this.router.navigate(['']);
+        this.currentUser = this.getUserFromDB();
       }
     }catch (e) {
       console.log(e);
@@ -77,5 +80,18 @@ export class AuthService {
         console.log(err);
         return null;
       });
+  }
+
+  getUserFromDB(){   //return User
+    this.getUser().then(data => {
+      const email = data.email;
+      const myInit = {
+        headers: {
+          Authorization: data.jwt
+        },
+        response: true,
+        queryStringParameters: {}
+      };
+    })
   }
 }

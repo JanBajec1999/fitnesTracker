@@ -18,7 +18,11 @@
       "function": {
         "fitnesTrackerUserLambda": {
           "deploymentBucketName": "amplify-fitnestracker-dev-141250-deployment",
-          "s3Key": "amplify-builds/fitnesTrackerUserLambda-38343567415569365a64-build.zip"
+          "s3Key": "amplify-builds/fitnesTrackerUserLambda-334a5865313862565961-build.zip"
+        },
+        "signInConfirmedTriger": {
+          "deploymentBucketName": "amplify-fitnestracker-dev-141250-deployment",
+          "s3Key": "amplify-builds/signInConfirmedTriger-3571624359546e657341-build.zip"
         }
       }
     }
